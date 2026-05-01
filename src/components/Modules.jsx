@@ -21,7 +21,7 @@ const modules = [
     emoji: '👨‍🏫',
     gradient: 'linear-gradient(135deg, #00CEC9, #55EFC4)',
     shadowColor: 'rgba(0, 206, 201, 0.3)',
-    link: 'https://3almni-teacher.vercel.app',
+    link: 'https://3alamni-teacher.vercel.app/',
     linkText: 'الدخول',
   },
   {
@@ -31,7 +31,7 @@ const modules = [
     emoji: '👨‍👩‍👦',
     gradient: 'linear-gradient(135deg, #FDCB6E, #F39C12)',
     shadowColor: 'rgba(253, 203, 110, 0.3)',
-    link: 'https://3almni-parent.vercel.app',
+    link: 'https://parent-web-app-ten.vercel.app/',
     linkText: 'الدخول',
   },
   {
@@ -41,7 +41,7 @@ const modules = [
     emoji: '🧠',
     gradient: 'linear-gradient(135deg, #FD79A8, #A29BFE)',
     shadowColor: 'rgba(253, 121, 168, 0.3)',
-    link: 'https://3almni-psychologist.vercel.app',
+    link: 'https://3almni-psychological.vercel.app/',
     linkText: 'الدخول',
   },
   {
@@ -51,7 +51,7 @@ const modules = [
     emoji: '🏫',
     gradient: 'linear-gradient(135deg, #E17055, #FDCB6E)',
     shadowColor: 'rgba(225, 112, 85, 0.3)',
-    link: 'https://3almni-admin.vercel.app',
+    link: 'https://school-admin-system-one.vercel.app',
     linkText: 'الدخول',
   },
 ];
