@@ -1,0 +1,62 @@
+/* ============================================
+   App-level styles & Scroll-to-top
+   ============================================ */
+
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── Scroll to Top Button ── */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.35);
+  z-index: 999;
+  transition: all var(--transition-base);
+  opacity: 0.85;
+}
+
+.scroll-top:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+  box-shadow: 0 8px 30px rgba(108, 92, 231, 0.5);
+}
+
+/* ── Smooth Section Transitions ── */
+section + section {
+  position: relative;
+}
+
+/* ── Selection Color ── */
+::selection {
+  background: rgba(108, 92, 231, 0.2);
+  color: var(--gray-900);
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

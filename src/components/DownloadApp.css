@@ -1,0 +1,231 @@
+.download {
+  position: relative;
+  overflow: hidden;
+}
+
+.download__bg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-dark);
+}
+
+.download__bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.download__bg-orb--1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(108, 92, 231, 0.25);
+  top: -100px;
+  right: -100px;
+  animation: float 10s ease-in-out infinite;
+}
+
+.download__bg-orb--2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(0, 206, 201, 0.15);
+  bottom: -80px;
+  left: -100px;
+  animation: float-reverse 12s ease-in-out infinite;
+}
+
+.download__bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.download__container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Content */
+.download__content {
+  flex: 1;
+}
+
+.download__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background: rgba(108, 92, 231, 0.2);
+  color: var(--primary-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.download__title {
+  color: var(--white);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-bottom: 18px;
+}
+
+.download__title span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.download__desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  max-width: 500px;
+}
+
+.download__highlights {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.download__highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.download__highlight svg {
+  color: var(--secondary);
+}
+
+/* Download Button */
+.download__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 36px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  box-shadow: 0 8px 30px rgba(108, 92, 231, 0.4);
+  transition: all var(--transition-base);
+  margin-bottom: 16px;
+}
+
+.download__btn:hover {
+  box-shadow: 0 12px 40px rgba(108, 92, 231, 0.5);
+}
+
+.download__btn-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.download__btn-small {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.download__btn-main {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.download__note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Phone Mockup */
+.download__mockup {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.download__phone {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+}
+
+.download__phone-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.download__phone-img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.3));
+  border-radius: var(--radius-xl);
+}
+
+.download__phone-float {
+  position: absolute;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.download__phone-float--1 {
+  top: 15%;
+  right: -15%;
+}
+
+.download__phone-float--2 {
+  bottom: 20%;
+  left: -10%;
+}
+
+@media (max-width: 900px) {
+  .download__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download__desc {
+    max-width: 100%;
+  }
+
+  .download__highlights {
+    justify-content: center;
+  }
+
+  .download__mockup {
+    max-width: 350px;
+  }
+
+  .download__phone-float--1 {
+    right: -5%;
+  }
+
+  .download__phone-float--2 {
+    left: -5%;
+  }
+}

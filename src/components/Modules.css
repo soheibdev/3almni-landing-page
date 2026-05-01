@@ -1,0 +1,135 @@
+.modules {
+  background: var(--gray-50);
+  position: relative;
+  overflow: hidden;
+}
+
+.modules::before {
+  content: '';
+  position: absolute;
+  top: -300px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.modules__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Make last 2 cards center in the row */
+.modules__grid > *:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.modules__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px 32px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modules__card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.modules__card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.modules__emoji {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  animation: bounce-soft 3s ease-in-out infinite;
+}
+
+.modules__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  margin-bottom: 20px;
+  transition: transform var(--transition-base);
+}
+
+.modules__card:hover .modules__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.modules__title {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: var(--gray-900);
+}
+
+.modules__desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--gray-400);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.modules__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.modules__btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .modules__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modules__grid > *:nth-child(4) {
+    grid-column: auto;
+  }
+
+  /* Center the 5th card */
+  .modules__grid > *:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .modules__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modules__grid > *:nth-child(5) {
+    max-width: 100%;
+  }
+}
