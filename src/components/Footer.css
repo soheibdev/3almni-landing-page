@@ -60,15 +60,10 @@
   margin-bottom: 16px;
 }
 
-.footer__logo-icon {
-  width: 38px;
+.footer__logo-img {
   height: 38px;
-  background: var(--gradient-primary);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
+  width: auto;
+  object-fit: contain;
 }
 
 .footer__logo span {

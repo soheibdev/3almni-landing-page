@@ -50,9 +50,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <div className="footer__logo-icon">
-                <BookOpen size={22} />
-              </div>
+              <img src="/logo.png" alt="علّمني" className="footer__logo-img" />
               <span>عَلِّمْني</span>
             </div>
             <p className="footer__brand-desc">

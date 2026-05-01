@@ -54,9 +54,7 @@ const Navbar = () => {
       <div className="navbar__container container">
         {/* Logo */}
         <a href="#hero" className="navbar__logo" onClick={(e) => handleNavClick(e, '#hero')}>
-          <div className="navbar__logo-icon">
-            <BookOpen size={24} />
-          </div>
+          <img src="/logo.png" alt="علّمني" className="navbar__logo-img" />
           <span className="navbar__logo-text">عَلِّمْني</span>
           <Sparkles size={14} className="navbar__logo-sparkle" />
         </a>
